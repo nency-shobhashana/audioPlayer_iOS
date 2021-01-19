@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jVC-WU-FCe">
+            <objects>
+                <viewController id="PEr-h2-ha9" customClass="ViewController" customModule="AudioPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5XL-x3-pPs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="fyo-v0-Kof">
+                                <rect key="frame" x="20" y="405" width="374" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vQl-oZ-d2q">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scrubber" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-6G-e39">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7nI-LO-hcM">
+                                                <rect key="frame" x="200" y="0.0" width="176" height="31"/>
+                                                <connections>
+                                                    <action selector="scrubberMoved:" destination="PEr-h2-ha9" eventType="valueChanged" id="dBv-Eg-hO9"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Tw1-Ug-FuS">
+                                        <rect key="frame" x="0.0" y="56" width="374" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Volume" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-KS-u9S">
+                                                <rect key="frame" x="0.0" y="0.0" width="172" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7HW-7M-y5j">
+                                                <rect key="frame" x="200" y="0.0" width="176" height="31"/>
+                                                <connections>
+                                                    <action selector="volumeChanged:" destination="PEr-h2-ha9" eventType="valueChanged" id="W3m-6U-akX"/>
+                                                </connections>
+                                            </slider>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ydC-gA-hI0">
+                                <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Item" image="play.fill" catalog="system" id="3fh-g5-pHH">
+                                        <connections>
+                                            <action selector="playAudio:" destination="PEr-h2-ha9" id="EFd-LB-zaI"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9lq-3z-hNj"/>
+                                    <barButtonItem title="Stop Btn" image="stop.fill" catalog="system" id="CFf-bW-mcg">
+                                        <connections>
+                                            <action selector="stopAudio:" destination="PEr-h2-ha9" id="WPt-IO-Wm6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qwx-cf-zus"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fyo-v0-Kof" firstAttribute="centerY" secondItem="5XL-x3-pPs" secondAttribute="centerY" id="CiN-bh-P5o"/>
+                            <constraint firstItem="ydC-gA-hI0" firstAttribute="trailing" secondItem="qwx-cf-zus" secondAttribute="trailing" id="GxR-Dd-Hog"/>
+                            <constraint firstItem="fyo-v0-Kof" firstAttribute="centerX" secondItem="5XL-x3-pPs" secondAttribute="centerX" id="LdK-AX-8PK"/>
+                            <constraint firstItem="ydC-gA-hI0" firstAttribute="leading" secondItem="qwx-cf-zus" secondAttribute="leading" id="RwH-89-7tQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ydC-gA-hI0" secondAttribute="bottom" id="TN2-GY-QMe"/>
+                            <constraint firstItem="fyo-v0-Kof" firstAttribute="leading" secondItem="5XL-x3-pPs" secondAttribute="leading" constant="20" id="UWs-8Q-KOX"/>
+                            <constraint firstAttribute="trailing" secondItem="fyo-v0-Kof" secondAttribute="trailing" constant="20" id="v68-8r-Y84"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playBtn" destination="3fh-g5-pHH" id="StX-NM-2tJ"/>
+                        <outlet property="scrubber" destination="7nI-LO-hcM" id="Kys-b7-HEK"/>
+                        <outlet property="volumeSlider" destination="7HW-7M-y5j" id="a6G-bU-CAs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Oj-5G-yti" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-67" y="115"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
+        <image name="stop.fill" catalog="system" width="128" height="113"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
