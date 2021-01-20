@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PEr-h2-ha9">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="jVC-WU-FCe">
             <objects>
-                <viewController id="PEr-h2-ha9" customClass="ViewController" customModule="AudioPlayerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PEr-h2-ha9" customClass="ViewController" customModule="Audio_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5XL-x3-pPs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                                 <items>
                                     <barButtonItem title="Item" image="play.fill" catalog="system" id="3fh-g5-pHH">
                                         <connections>
-                                            <action selector="playAudio:" destination="PEr-h2-ha9" id="EFd-LB-zaI"/>
+                                            <action selector="playAudio:" destination="PEr-h2-ha9" id="dCT-Mt-AJ5"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="9lq-3z-hNj"/>
@@ -85,9 +85,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="playBtn" destination="3fh-g5-pHH" id="StX-NM-2tJ"/>
-                        <outlet property="scrubber" destination="7nI-LO-hcM" id="Kys-b7-HEK"/>
-                        <outlet property="volumeSlider" destination="7HW-7M-y5j" id="a6G-bU-CAs"/>
+                        <outlet property="playBtn" destination="3fh-g5-pHH" id="aB9-Cr-6aQ"/>
+                        <outlet property="scrubber" destination="7nI-LO-hcM" id="9Oa-oz-7Fh"/>
+                        <outlet property="voulumSlider" destination="7HW-7M-y5j" id="QI7-7c-exX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Oj-5G-yti" sceneMemberID="firstResponder"/>
